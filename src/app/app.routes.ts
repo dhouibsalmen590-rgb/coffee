@@ -8,7 +8,7 @@ import { HistoriqueComponent } from './components/historique/historique.componen
 import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   {
     path: 'dashboard',
@@ -35,5 +35,5 @@ export const routes: Routes = [
     component: HistoriqueComponent,
     canActivate: [authGuard]
   },
-  { path: '**', redirectTo: '/login' }
+  { path: '**', redirectTo: '/dashboard' }
 ];

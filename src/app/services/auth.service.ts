@@ -22,6 +22,10 @@ export class AuthService {
     );
   }
 
+  autoLogin(): Observable<LoginResponse> {
+    return this.login({ username: 'admin', password: 'admin123' });
+  }
+
   logout(): void {
     localStorage.removeItem('cafe_user');
     localStorage.removeItem('cafe_token');
