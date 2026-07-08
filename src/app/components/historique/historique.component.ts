@@ -92,7 +92,7 @@ import { Commande } from '../../models/models';
                   <td>
                     <div style="max-width: 200px;">
                       <span *ngFor="let l of cmd.lignes; let last = last" style="font-size: 0.78rem; color: var(--text-secondary);">
-                        {{ l.article?.nom }} x{{ l.quantite }}<span *ngIf="!last">, </span>
+                        {{ l.article.nom }} x{{ l.quantite }}<span *ngIf="!last">, </span>
                       </span>
                     </div>
                   </td>
