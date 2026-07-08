@@ -5,7 +5,7 @@ import { Article, Commande, CommandeRequest, Depense, DashboardStats } from '../
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
-  private baseUrl = 'http://localhost:8080/api';
+  private baseUrl = 'https://coffeeback-production.up.railway.app/api';
 
   constructor(private http: HttpClient) {}
 

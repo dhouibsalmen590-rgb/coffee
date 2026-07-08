@@ -6,7 +6,7 @@ import { LoginRequest, LoginResponse } from '../models/models';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private apiUrl = 'http://localhost:8080/api/auth';
+  private apiUrl = 'https://coffeeback-production.up.railway.app/api/auth';
   private currentUserSubject = new BehaviorSubject<LoginResponse | null>(this.getStoredUser());
   currentUser$ = this.currentUserSubject.asObservable();
 
